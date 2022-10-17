@@ -33,17 +33,18 @@ class _FavouritePageState extends State<FavouritePage> {
                     width: 200,
                     fit: BoxFit.cover,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text("${favModel.name}"),
                       Text(
                         "${favModel.price}",
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 15.0, fontWeight: FontWeight.w500),
                       ),
-                      IconButton(onPressed: () {}, icon: Icon(Icons.favorite))
+                      IconButton(
+                          onPressed: () {}, icon: const Icon(Icons.favorite))
                     ],
                   )
                 ],

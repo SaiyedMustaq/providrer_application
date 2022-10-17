@@ -3,6 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:provider_application/shopingApp/ListItemProvider.dart';
 import 'package:provider_application/shopingApp/ProductPage.dart';
 
+import 'bottomNav/bottom_nav.dart';
+import 'bottomNav/bottom_navigation_bar_provider.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,16 +17,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => ListItemProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => ListItemProvider()),
+        ChangeNotifierProvider(create: (_) => BottomNavigationBarProvider())
+      ],
       child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const ProductPage(),
-        // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      ),
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          //home: const ProductPage(),
+          home: const BottomNavPage()
+          // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+          ),
     );
   }
 }
