@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +18,7 @@ class _FavouritePageState extends State<FavouritePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Consumer<ListItemProvider>(
+      body: Consumer<ItemViewModel>(
         builder: (context, itemProvider, child) => ListView.builder(
           itemCount: itemProvider.favList.length,
           itemBuilder: (context, index) {

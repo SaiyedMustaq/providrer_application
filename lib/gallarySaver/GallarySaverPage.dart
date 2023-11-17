@@ -25,8 +25,7 @@ class _GallarySaverPageState extends State<GallarySaverPage> {
             flex: 1,
             child: Container(
               child: SizedBox.expand(
-                child: RaisedButton(
-                  color: Colors.blue,
+                child: TextButton(
                   onPressed: _takePhoto,
                   child: Text(firstButtonText,
                       style:
@@ -38,8 +37,7 @@ class _GallarySaverPageState extends State<GallarySaverPage> {
           Flexible(
             child: Container(
                 child: SizedBox.expand(
-              child: RaisedButton(
-                color: Colors.white,
+              child: TextButton(
                 //onPressed: saveNetworkVideo,
                 onPressed: _recordVideo,
                 child: Text(secondButtonText,

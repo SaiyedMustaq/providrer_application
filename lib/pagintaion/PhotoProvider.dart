@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_getters_setters, file_names
+
 import 'package:flutter/material.dart';
 
 import '../network/NetworkCall.dart';

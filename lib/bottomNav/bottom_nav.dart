@@ -16,8 +16,6 @@ class BottomNavPage extends StatefulWidget {
 class _BottomNavPageState extends State<BottomNavPage> {
   int selectedPage = 0;
 
-  final _pageOptions = const [HomeScreen(), InboxScreen(), FavouriteScreen()];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
